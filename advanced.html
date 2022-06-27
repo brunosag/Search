@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search Advanced Search</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="/assets/logo.png" alt="Google" title="Go to Google Home" width="74" height="24">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <h1>Advanced Search</h1>
+        <div>
+            <span>Find pages with...</span>
+            <span>To do this in the search box.</span>
+        </div>
+        <form action="https://www.google.com/search">
+            <div>
+                <label for="advanced-all">all these words: </label>
+                <input type="text" name="as_q" id="advanced-all">
+                <span>Type the important words: <span>tri-colour rat terrier</span></span>
+            </div>
+            <div>
+                <label for="advanced-exact">this exact word or phrase: </label>
+                <input type="text" name="as_epq" id="advanced-exact">
+                <span>Put exact words in quotes: <span>"rat terrier"</span></span>
+            </div>
+            <div>
+                <label for="advanced-any">any of these words: </label>
+                <input type="text" name="as_oq" id="advanced-any">
+                <span>Type <span>OR</span> between all the words you want: <span>miniature OR standard</span></span>
+            </div>
+            <div>
+                <label for="advanced-none">none of these words: </label>
+                <input type="text" name="as_eq" id="advanced-none">
+                <span>Put a minus sign just before words that you don't want: <span>-rodent, -"Jack Russell"</span></span>
+            </div>
+            <button type="submit">Advanced Search</button>
+        </form>
+    </body>
+</html>
