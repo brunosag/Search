@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/9aea94aa37.js" crossorigin="anonymous"></script>
         <title>Search Advanced Search</title>
     </head>
     <body>
@@ -13,33 +15,33 @@
                 </li>
             </ul>
         </nav>
-        <h1>Advanced Search</h1>
+        <h1 class="advanced-title">Advanced Search</h1>
         <div>
-            <span>Find pages with...</span>
-            <span>To do this in the search box.</span>
+            <span class="advanced-find-title">Find pages with...</span>
+            <span class="advanced-do-title">To do this in the search box.</span>
         </div>
         <form action="https://www.google.com/search">
             <div>
-                <label for="advanced-all">all these words: </label>
+                <label class="advanced-find-label" for="advanced-all">all these words: </label>
                 <input type="text" name="as_q" id="advanced-all">
-                <span>Type the important words: <span>tri-colour rat terrier</span></span>
+                <span class="advanced-do-text">Type the important words: <span class="advanced-do-quote">tri-colour rat terrier</span></span>
             </div>
             <div>
-                <label for="advanced-exact">this exact word or phrase: </label>
+                <label class="advanced-find-label" for="advanced-exact">this exact word or phrase: </label>
                 <input type="text" name="as_epq" id="advanced-exact">
-                <span>Put exact words in quotes: <span>"rat terrier"</span></span>
+                <span class="advanced-do-text">Put exact words in quotes: <span class="advanced-do-quote">"rat terrier"</span></span>
             </div>
             <div>
-                <label for="advanced-any">any of these words: </label>
+                <label class="advanced-find-label" for="advanced-any">any of these words: </label>
                 <input type="text" name="as_oq" id="advanced-any">
-                <span>Type <span>OR</span> between all the words you want: <span>miniature OR standard</span></span>
+                <span class="advanced-do-text">Type <span class="advanced-do-quote">OR</span> between all the words you want: <span class="advanced-do-quote">miniature OR standard</span></span>
             </div>
             <div>
-                <label for="advanced-none">none of these words: </label>
+                <label class="advanced-find-label" for="advanced-none">none of these words: </label>
                 <input type="text" name="as_eq" id="advanced-none">
-                <span>Put a minus sign just before words that you don't want: <span>-rodent, -"Jack Russell"</span></span>
+                <span class="advanced-do-text">Put a minus sign just before words that you don't want: <span class="advanced-do-quote">-rodent, -"Jack Russell"</span></span>
             </div>
-            <button type="submit">Advanced Search</button>
+            <button class="advanced-button" type="submit">Advanced Search</button>
         </form>
     </body>
 </html>

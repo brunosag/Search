@@ -1,0 +1,103 @@
+/********************************
+    variables
+********************************/
+
+:root {
+    --primary: #4285f4;
+}
+
+
+/********************************
+    resets
+********************************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*********************************
+    typography
+/********************************/
+
+:root {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.nav-link,
+.main-search-icon,
+.main-search-button,
+.advanced-do-title {
+    font-size: .875rem;
+}
+
+.nav-link {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.logo-text {
+    color: var(--primary);
+}
+
+.main-search-icon {
+    color: #9aa0a6;
+}
+
+.main-search-button {
+    color: #3c4043;
+}
+
+.main-search-button:hover {
+    color: #202124;
+}
+
+.image-search-button {
+    color: var(--primary);
+    font-size: 1.09375rem;
+}
+
+.advanced-title {
+    color: #d93025;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+.advanced-find-title {
+    color: #333;
+    font-size: 1rem;
+}
+
+.advanced-do-title {
+    color: #777;
+    font-size: .8125rem;
+    font-weight: bold;
+}
+
+.advanced-find-label {
+    color: #222;
+    font-size: .8125rem;
+}
+
+.advanced-do-text {
+    color: #555;
+    font-size: .6875rem;
+}
+
+.advanced-do-quote {
+    color: #666;
+    font-family: monospace;
+}
+
+.advanced-button {
+    color: #fff;
+    font-size: .6875rem;
+    font-weight: bold;
+}
