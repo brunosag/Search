@@ -13,6 +13,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -23,7 +24,6 @@
 /********************************/
 
 :root {
-    font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
 }
 
@@ -100,4 +100,66 @@
     color: #fff;
     font-size: .6875rem;
     font-weight: bold;
+}
+
+
+/*********************************
+    base styles
+/********************************/
+
+.main-search {
+    background-color: #fff;
+    border-radius: 1.5rem;
+    border: 1px solid #dfe1e5;
+}
+
+.main-search:hover {
+    box-shadow: 0 1px .375rem rgba(32, 33, 36, 0.28);
+}
+
+.main-search-input {
+    border: none;
+    outline: none;
+}
+
+.image-search-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.main-search-button {
+    background-color: #f8f9fa;
+    border-radius: .25rem;
+    border: none;
+}
+
+.main-search-button:hover {
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.advanced-input {
+    border-top-color: #c0c0c0;
+    border: 1px solid #d9d9d9;
+}
+
+.advanced-input:focus {
+    border-color: var(--primary);
+    box-shadow: inset 0 1px .125rem rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.advanced-button {
+    background: -moz-linear-gradient(top, #4d90fe, #4787ed);
+    background: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+    background: linear-gradient(top, #4d90fe, #4787ed);
+    border: 1px solid #3079ed;
+}
+
+.advanced-button:hover {
+    background: -moz-linear-gradient(top, #4d90fe, #357ae8);
+    background: -webkit-linear-gradient(top, #4d90fe, #357ae8);
+    background: linear-gradient(top, #4d90fe, #357ae8);
+    border-color: #2f5bb7;
 }
