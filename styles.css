@@ -27,7 +27,6 @@
     font-size: 16px;
 }
 
-.nav-link,
 .main-search-icon,
 .main-search-button,
 .advanced-do-title {
@@ -36,6 +35,7 @@
 
 .nav-link {
     color: rgba(0, 0, 0, 0.87);
+    font-size: .8125rem;
     text-decoration: none;
 }
 
@@ -49,6 +49,17 @@
 
 .main-search-icon {
     color: #9aa0a6;
+    font-size: .875rem;
+}
+
+.main-search-input {
+    color: rgba(0, 0, 0, .87);
+    font-size: 1rem;
+}
+
+.main-search-clear {
+    color: #70757a;
+    font-size: 1.25rem;
 }
 
 .main-search-button {
@@ -107,19 +118,31 @@
     base styles
 /********************************/
 
+.nav-menu {
+    list-style-type: none;
+}
+
 .main-search {
     background-color: #fff;
     border-radius: 1.5rem;
     border: 1px solid #dfe1e5;
 }
 
-.main-search:hover {
+.main-search:hover,
+.input-focused {
     box-shadow: 0 1px .375rem rgba(32, 33, 36, 0.28);
 }
 
 .main-search-input {
     border: none;
     outline: none;
+    background-color: transparent;
+}
+
+.main-search-clear {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .image-search-button {
@@ -131,11 +154,12 @@
 .main-search-button {
     background-color: #f8f9fa;
     border-radius: .25rem;
-    border: none;
+    border: 1px solid #f8f9fa;
+    cursor: pointer;
 }
 
 .main-search-button:hover {
-    border: 1px solid #dadce0;
+    border-color: #dadce0;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -162,4 +186,76 @@
     background: -webkit-linear-gradient(top, #4d90fe, #357ae8);
     background: linear-gradient(top, #4d90fe, #357ae8);
     border-color: #2f5bb7;
+}
+
+
+/*********************************
+    display
+/********************************/
+
+html,
+body,
+.container {
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content 2fr;
+    width: max(100%, 400px);
+}
+
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.25rem;
+    place-self: center;
+    text-align: center;
+    width: min(100%, 39rem);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: end;
+    padding: 1.25rem;
+}
+
+.main-search-logo {
+    align-self: center;
+}
+
+.main-search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8125rem;
+    justify-content: center;
+    padding: 1.625rem 0;
+}
+
+.main-search {
+    display: flex;
+}
+
+.main-search-icon {
+    padding: .84375rem 1rem;
+}
+
+.main-search-input {
+    width: 100%;
+}
+
+.main-search-clear {
+    display: none;
+    padding: 0 1.25rem 0 1rem;
+}
+
+.main-search-buttons {
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+}
+
+.main-search-button {
+    padding: .53125rem 1rem;
 }

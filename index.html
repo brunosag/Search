@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/9aea94aa37.js" crossorigin="anonymous"></script>
         <title>Search</title>
     </head>
+
     <body>
-        <nav class="nav">
-            <ul class="nav-menu">
-                <li class="nav-item"><a class="nav-link" href="images.html">Images</a></li>
-                <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
-            </ul>
-        </nav>
-        <img src="/assets/logo.png" alt="Google" width="272" height="92">
-        <form action="https://www.google.com/search">
-            <div class="main-search">
-                <span class="main-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input class="main-search-input" type="text" name="q">
+        <div class="container">
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a class="nav-link" href="images.html">Images</a></li>
+                    <li class="nav-item"><a class="nav-link" href="advanced.html">Advanced</a></li>
+                </ul>
+            </nav>
+            <div class="center-top-margin"></div>
+            <div class="center-wrapper">
+                <img class="main-search-logo" src="/assets/logo.png" alt="Google" width="272" height="92">
+                <form class="main-search-form" action="https://www.google.com/search">
+                    <div class="main-search">
+                        <span class="main-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input class="main-search-input" type="text" name="q" title="Search" autocomplete="off">
+                        <button class="main-search-clear" title="Clear" type="button"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="main-search-buttons">
+                        <button class="main-search-button" type="submit">Google Search</button>
+                        <button class="main-search-button" type="submit" name="btnI" value="1">I'm Feeling Lucky</button>
+                    </div>
+                </form>
             </div>
-            <button class="main-search-button" type="submit">Google Search</button>
-            <button class="main-search-button" type="submit" name="btnI" value="1">I'm Feeling Lucky</button>
-        </form>
+            <div class="center-bottom-margin"></div>
+        </div>
     </body>
+
+    <script>
+        var mainSearchInput = document.querySelector(".main-search-input");
+        var mainSearch = document.querySelector(".main-search");
+        var mainSearchClear = document.querySelector(".main-search-clear");
+        mainSearchInput.addEventListener("focus", () => {
+            mainSearch.classList.add("input-focused");
+        })
+        mainSearchInput.addEventListener("blur", () => {
+            mainSearch.classList.remove("input-focused");
+        })
+        mainSearchInput.addEventListener("input", () => {
+            if (mainSearchInput.value) {
+                mainSearchClear.style.display = "block";
+            }
+            else {
+                mainSearchClear.style.display = "none";
+            }
+        })
+        mainSearchClear.addEventListener("click", () => {
+            mainSearchInput.value = "";
+            mainSearchClear.style.display = "none";
+        })
+    </script>
+
 </html>
