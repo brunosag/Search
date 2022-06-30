@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/9aea94aa37.js" crossorigin="anonymous"></script>
         <title>Search Images</title>
     </head>
+
     <body>
-        <nav class="nav">
-            <ul class="nav-menu">
-                <li class="nav-item"><a class="nav-link" href="index.html">Search</a></li>
-            </ul>
-        </nav>
-        <img src="/assets/logo.png" alt="Google">
-        <span class="logo-text">Images</span>
-        <form action="https://www.google.com/search">
-            <div class="main-search">
-                <span class="main-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input class="main-search-input" type="text" name="q">
-                <button class="image-search-button" type="submit" name="tbm" value="isch">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Search</a></li>
+                </ul>
+            </nav>
+            <div class="center-top-margin"></div>
+            <div class="center-wrapper">
+                <div class="main-search-logo">
+                    <img src="/assets/logo.png" alt="Google">
+                    <span class="logo-text">images</span>
+                </div>
+                <form class="main-search-form" action="https://www.google.com/search">
+                    <div class="main-search">
+                        <span class="main-search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input class="main-search-input" type="text" name="q" autocomplete="off">
+                        <button class="main-search-clear" title="Clear" type="button"><i class="fa-solid fa-xmark"></i></button>
+                        <span class="image-search-separator"></span>
+                        <button class="image-search-button" type="submit" name="tbm" value="isch"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
             </div>
-        </form>
+            <div class="center-bottom-margin"></div>
+        </div>
+
+        <script src="script.js"></script>
+
     </body>
+
 </html>

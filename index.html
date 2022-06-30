@@ -8,6 +8,7 @@
     </head>
 
     <body>
+        
         <div class="container">
             <nav class="navbar">
                 <ul class="nav-menu">
@@ -32,30 +33,9 @@
             </div>
             <div class="center-bottom-margin"></div>
         </div>
-    </body>
 
-    <script>
-        var mainSearchInput = document.querySelector(".main-search-input");
-        var mainSearch = document.querySelector(".main-search");
-        var mainSearchClear = document.querySelector(".main-search-clear");
-        mainSearchInput.addEventListener("focus", () => {
-            mainSearch.classList.add("input-focused");
-        })
-        mainSearchInput.addEventListener("blur", () => {
-            mainSearch.classList.remove("input-focused");
-        })
-        mainSearchInput.addEventListener("input", () => {
-            if (mainSearchInput.value) {
-                mainSearchClear.style.display = "block";
-            }
-            else {
-                mainSearchClear.style.display = "none";
-            }
-        })
-        mainSearchClear.addEventListener("click", () => {
-            mainSearchInput.value = "";
-            mainSearchClear.style.display = "none";
-        })
-    </script>
+        <script src="script.js"></script>
+
+    </body>
 
 </html>
